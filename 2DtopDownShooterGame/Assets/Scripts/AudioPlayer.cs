@@ -13,24 +13,11 @@ public class AudioPlayer : MonoBehaviour
   public void PlayShootingClip()
   {
     PlayClip(shootingClip, shootingVolume);
-    // if (shootingClip != null)
-    // {
-    //   AudioSource.PlayClipAtPoint(shootingClip,
-    //   Camera.main.transform.position,
-    //   shootingVolume);
-    // }
   }
 
   public void PlayDamageClip()
   {
     PlayClip(damageClip, damageVolume);
-
-    // if (damageClip != null)
-    // {
-    //   AudioSource.PlayClipAtPoint(damageClip,
-    //   Camera.main.transform.position,
-    //   damageVolume);
-    // }
   }
 
   void PlayClip(AudioClip clip, float volume)
@@ -40,6 +27,5 @@ public class AudioPlayer : MonoBehaviour
       Vector2 cameraPos = Camera.main.transform.position;
       AudioSource.PlayClipAtPoint(clip, cameraPos, volume);
     }
-
   }
 }
