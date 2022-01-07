@@ -30,6 +30,7 @@ public class CameraShake : MonoBehaviour
     }
     transform.position = initialPosition;
   }
+  // just for testing
 
 
 }
