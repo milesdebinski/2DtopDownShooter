@@ -7,25 +7,18 @@ public class ScoreKeeper : MonoBehaviour
   [SerializeField] int score;
 
 
-  void Start()
-  {
-
-  }
-
-  void Update()
-  {
-
-  }
-
   public int GetScore()
   {
     return score;
   }
 
 
-  public void AddScore(int add)
+  public void ModifyScore(int value)
   {
-    score += add;
+
+    score += value;
+    Mathf.Clamp(score, 0, int.MaxValue);
+    Debug.Log(score);
   }
 
   public void ResetScore()
