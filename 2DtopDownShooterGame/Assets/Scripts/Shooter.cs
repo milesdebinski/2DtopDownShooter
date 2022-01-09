@@ -73,6 +73,7 @@ public class Shooter : MonoBehaviour
 
 
       audioPlayer.PlayShootingClip();
+      // audioPlayer.GetInstance().PlayShootingClip();
 
       // return Mathf.Clamp(spawnTime, minimumSpawnTime, float.MaxValue);
       yield return new WaitForSeconds(timeToNextProjectile);
